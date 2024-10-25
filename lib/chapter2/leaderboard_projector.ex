@@ -39,9 +39,9 @@ defmodule Chapter2.LeaderboardProjector do
   # but this is just an example.
   defp rerank(scores) when is_map(scores) do
     scores
-      |> Map.to_list()
-      |> Enum.sort(fn {_key1, val1}, {_key2, val2} -> val1 >= val2 end)
-      |> Enum.take(10)
+    |> Map.to_list()
+    |> Enum.sort(fn {_key1, val1}, {_key2, val2} -> val1 >= val2 end)
+    |> Enum.take(10)
   end
 
   # Note, if we needed to switch this to top 10 in the week the modeling can
